@@ -1,0 +1,24 @@
+<p>pipes works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mb-3">
+           <button (click)="Onadduser()">Add User </button>
+        </div>
+        <div class="my-2">
+{{appstatus|async}}
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-8 mb-3">
+            <div>
+                <input type="text" class="form-control" [(ngModel)]="filteredstring">
+            </div>
+            <div *ngFor="let user of users|filter:filteredstring ">
+            <div >Name:{{user.name|uppercase|short:6}}</div>
+            <div>DoJ:{{user.joinedDate|date:'fullDate'|uppercase}}</div>
+        </div>
+        </div>
+
+        
+    </div>

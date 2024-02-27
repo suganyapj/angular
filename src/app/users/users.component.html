@@ -1,0 +1,19 @@
+<p>users works!</p>
+<h4>Users Dashboard</h4>
+<button class="btnbtn-success"[routerLink]="['/adduser']">AddUser</button>
+<h2></h2>
+<table class="table">
+    <tr>
+        <th>Id </th>
+        <th>Name</th>
+        <th> Username</th>
+        <th> Email</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td><a [routerLink]="['/user',user.id]">{{user.id}}</a></td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+    </tr>
+</table>
+

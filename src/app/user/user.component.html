@@ -1,0 +1,30 @@
+
+<!-- {{user|json}} -->
+<table class="table">
+    <tr>
+        <th>Username</th>
+        <td>{{user.username}}</td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td>{{user.name}}</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>{{user.email}}</td>
+    </tr> 
+    <tr>
+        <th>City</th>
+        <td>{{user.address.city}}</td>
+    </tr> 
+</table>
+<div>
+    <ul class="nav nav-tabs " >
+       <li class="nav-item"><a class="nav-link" routerLink="address">Address</a></li>
+<li class="nav-item"><a class="nav-link" routerLink="company">company</a></li>
+      </ul>
+</div>
+<div>
+    <router-outlet></router-outlet>
+
+</div>

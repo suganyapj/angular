@@ -1,0 +1,33 @@
+
+
+<div>
+  <app-notificationboard></app-notificationboard>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      
+      <ul class="nav nav-pills flex-column " >
+        <li class="nav-item" ><a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="contact">Contact</a></li>
+
+        <li class="nav-item"><a class="nav-link"
+          [routerLink]="['/about',{
+            outlets:{
+              'map':['location'],
+            'feeds':['feedback']}
+            }]">About</a>
+            </li>
+        <li class="nav-item"><a class="nav-link" routerLink="/users">Users</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/rxjs">Rxjs</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/pipes">Pipes</a></li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+<div class="col-md-12">
+  <router-outlet></router-outlet>
+</div>
+    </div>
+  </div>
+</div>
